@@ -47,7 +47,7 @@ Four features are derived from the raw sensor readings:
 | `pressure_roll_mean` | 5-reading rolling mean of pressure diff | ~33% |
 | `flow_roll_std` | 5-reading rolling std of flow diff | ~11% |
 
-The rolling standard deviation of pressure differential is the strongest signal. A leak creates sudden, erratic variance in flow loss that normal operation does not produce.
+The rolling mean of pressure differential is the strongest signal in this dataset. A leak creates a sustained elevated pressure drop across multiple hours that normal operation does not produce — and it is this persistent deviation, not short-term variance, that the model picks up on most reliably.
 
 ### 3. Model Training
 A Random Forest Classifier is trained with `class_weight='balanced'` to handle the class imbalance inherent in leak detection datasets (~7.5% positive rate). The model is evaluated with stratified cross-validation and a tuned decision threshold of 0.30 to maximise recall on the minority (leak) class.
