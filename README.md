@@ -28,7 +28,7 @@ The system ingests four engineered sensor features, runs them through a trained 
 
 | SCADA Live Panel | Model Evaluation |
 |---|---|
-| ![SCADA](https://github.com/tmaks7/pipeline-leak-app/blob/master/Pipeline_SCADA_Leak%20Detector_modelevaluation_page-0001.jpg) | ![Eval](https://via.placeholder.com/480x280/0e1117/c8420a?text=Model+Evaluation) |
+| ![SCADA](https://github.com/tmaks7/pipeline-leak-app/blob/master/Pipeline_SCADA_Leak%20Detector_modelevaluation_page-0001.jpg) | ![Eval](https://github.com/tmaks7/pipeline-leak-app/blob/master/Pipeline_SCADA_Leak%20Detector_modelevaluation_page-0001.jpg) |
 
 ---
 
