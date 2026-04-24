@@ -13,7 +13,7 @@
 
 This project simulates a real-world oil & gas pipeline monitoring system that detects leak events from sensor telemetry data using a trained Random Forest classifier. The application combines traditional SCADA (Supervisory Control and Data Acquisition) visual design with modern machine learning inference, deployed as an interactive web application.
 
-The system ingests four engineered sensor features, runs them through a trained model, and outputs a real-time leak probability with visual alarms — mimicking the kind of monitoring dashboard used in industrial pipeline operations.
+The system ingests four engineered sensor features, runs them through a trained model, and outputs a real-time leak probability with visual alarms, mimicking the kind of monitoring dashboard used in industrial pipeline operations.
 
 ---
 
