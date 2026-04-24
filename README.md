@@ -42,10 +42,10 @@ Four features are derived from the raw sensor readings:
 
 | Feature | Description | Importance |
 |---|---|---|
-| `pressure_diff` | Inlet minus outlet pressure | ~18% |
-| `flow_diff` | Inlet minus outlet flow rate | ~32% |
-| `pressure_roll_mean` | 5-reading rolling mean of pressure diff | ~9% |
-| `flow_roll_std` | 5-reading rolling std of flow diff | ~41% |
+| `pressure_diff` | Inlet minus outlet pressure | ~28% |
+| `flow_diff` | Inlet minus outlet flow rate | ~28% |
+| `pressure_roll_mean` | 5-reading rolling mean of pressure diff | ~33% |
+| `flow_roll_std` | 5-reading rolling std of flow diff | ~11% |
 
 The rolling standard deviation of flow differential is the strongest signal. A leak creates sudden, erratic variance in flow loss that normal operation does not produce.
 
