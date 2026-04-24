@@ -77,7 +77,7 @@ The deployed app provides five views:
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 pipeline_leak/
@@ -139,7 +139,7 @@ Open `http://localhost:8501` in your browser.
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 ```
 streamlit>=1.35.0
@@ -155,14 +155,14 @@ joblib
 
 ---
 
-## 🔧 Configuration
+##  Configuration
 
 The decision threshold defaults to **0.30** and is adjustable via the sidebar slider at runtime. Lowering the threshold increases recall (fewer missed leaks) at the cost of more false alarms (the right trade-off for safety-critical pipeline monitoring).
 
 
 ---
 
-## ☁️ Deployment
+##  Deployment
 
 The app is deployed on **Streamlit Community Cloud**. Any push to the `main or master` branch triggers an automatic redeploy, no manual steps required.
 
@@ -176,7 +176,7 @@ To deploy your own instance:
 
 ---
 
-## 🛣️ Roadmap
+##  Roadmap
 
 - [ ] Connect to live OPC-UA / MQTT sensor feed
 - [ ] Add LSTM-based temporal anomaly detection
@@ -186,9 +186,8 @@ To deploy your own instance:
 
 ---
 
-## 👤 Author
+##  Author
 
-**Your Name**
 - LinkedIn: [Adetona Makinde](www.linkedin.com/in/adetona-makinde)
 
 
