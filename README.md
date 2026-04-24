@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project simulates a real-world oil & gas pipeline monitoring system that detects leak events from sensor telemetry data using a trained Random Forest classifier. The application combines traditional SCADA (Supervisory Control and Data Acquisition) visual design with modern machine learning inference, deployed as an interactive web application.
 
@@ -17,14 +17,14 @@ The system ingests four engineered sensor features, runs them through a trained 
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pipeline-leak-app-dklxdmarvknwjkyanytx7a.streamlit.app/)
 
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 | SCADA Live Panel | Model Evaluation |
 |---|---|
@@ -32,10 +32,10 @@ The system ingests four engineered sensor features, runs them through a trained 
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 ### 1. Data Generation
-Synthetic pipeline sensor data is generated at hourly intervals across 2,000 readings, capturing four sensor channels: inlet pressure, outlet pressure, inlet flow, and outlet flow. Leak events are injected at random intervals with realistic anomaly magnitudes — pressure drops of 5–10 kPa and flow losses of 10–30 L/s.
+Synthetic pipeline sensor data is generated at hourly intervals across 2,000 readings, capturing four sensor channels: inlet pressure, outlet pressure, inlet flow, and outlet flow. Leak events are injected at random intervals with realistic anomaly magnitudes: pressure drops of 5–10 kPa and flow losses of 10–30 L/s.
 
 ### 2. Feature Engineering
 Four features are derived from the raw sensor readings:
@@ -47,7 +47,7 @@ Four features are derived from the raw sensor readings:
 | `pressure_roll_mean` | 5-reading rolling mean of pressure diff | ~9% |
 | `flow_roll_std` | 5-reading rolling std of flow diff | ~41% |
 
-The rolling standard deviation of flow differential is the strongest signal — a leak creates sudden erratic variance in flow loss that normal operation does not produce.
+The rolling standard deviation of flow differential is the strongest signal. A leak creates sudden, erratic variance in flow loss that normal operation does not produce.
 
 ### 3. Model Training
 A Random Forest Classifier is trained with `class_weight='balanced'` to handle the class imbalance inherent in leak detection datasets (~7.5% positive rate). The model is evaluated with stratified cross-validation and a tuned decision threshold of 0.30 to maximise recall on the minority (leak) class.
@@ -67,11 +67,11 @@ The deployed app provides five views:
 
 | Metric | Score |
 |---|---|
-| ROC–AUC | ~0.99 |
-| Accuracy | ~97% |
-| F1 — Leak class | ~0.95 |
-| Recall — Leak class | ~0.97 |
-| CV ROC-AUC (5-fold) | ~0.99 |
+| ROC-AUC | ~0.85 |
+| Accuracy | ~84% |
+| F1 - Leak class | ~0.65 |
+| Recall - Leak class | ~0.73 |
+| CV ROC-AUC (5-fold) | ~0.85 |
 
 > Metrics are evaluated on a held-out 20% stratified test set at decision threshold 0.30.
 
@@ -145,7 +145,7 @@ Open `http://localhost:8501` in your browser.
 streamlit>=1.35.0
 pandas
 numpy
-scikit-learn==1.5.2
+scikit-learn==1.8.0
 matplotlib
 seaborn
 joblib
@@ -157,15 +157,14 @@ joblib
 
 ## 🔧 Configuration
 
-The decision threshold defaults to **0.30** and is adjustable via the sidebar slider at runtime. Lowering the threshold increases recall (fewer missed leaks) at the cost of more false alarms — the right trade-off for safety-critical pipeline monitoring.
+The decision threshold defaults to **0.30** and is adjustable via the sidebar slider at runtime. Lowering the threshold increases recall (fewer missed leaks) at the cost of more false alarms (the right trade-off for safety-critical pipeline monitoring).
 
-The dark theme is defined in `.streamlit/config.toml` and is automatically applied on both local and cloud deployments.
 
 ---
 
 ## ☁️ Deployment
 
-The app is deployed on **Streamlit Community Cloud**. Any push to the `main` branch triggers an automatic redeploy — no manual steps required.
+The app is deployed on **Streamlit Community Cloud**. Any push to the `main or master` branch triggers an automatic redeploy, no manual steps required.
 
 To deploy your own instance:
 
@@ -190,14 +189,8 @@ To deploy your own instance:
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- LinkedIn: [your-linkedin](https://linkedin.com/in/your-linkedin)
+- LinkedIn: [Adetona Makinde](www.linkedin.com/in/adetona-makinde)
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
