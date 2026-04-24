@@ -19,7 +19,7 @@ The system ingests four engineered sensor features, runs them through a trained 
 
 ## 🚀 Live Demo
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://YOUR_APP_URL.streamlit.app](https://pipeline-leak-app-dklxdmarvknwjkyanytx7a.streamlit.app/))
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pipeline-leak-app-dklxdmarvknwjkyanytx7a.streamlit.app/)
 
 > Replace the link above with your deployed Streamlit app URL.
 
